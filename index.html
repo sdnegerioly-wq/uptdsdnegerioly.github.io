@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UPTD SD Negeri Oly – PPDB 2026/2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Font lokal sebagai fallback -->
 <style>
   :root {
     --blue: #1565C0;
@@ -24,7 +24,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(--white); overflow-x:hidden; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: var(--text); background: var(--white); overflow-x:hidden; }
 
   /* ── SCROLLBAR ── */
   ::-webkit-scrollbar { width:6px; }
@@ -46,7 +46,8 @@
   }
   .nav-brand { display:flex; align-items:center; gap:12px; }
   .nav-brand img { width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,0.8); box-shadow:0 0 0 3px rgba(255,255,255,0.2); }
-  ..nav-brand span { color:#fff; font-weight:700; font-size:1rem; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:220px; }
+  .nav-brand span { color:#fff; font-weight:700; font-size:1rem; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:220px; }
+  .nav-links { display:flex; gap:4px; }
   .nav-links a {
     color:rgba(255,255,255,0.88); text-decoration:none;
     padding:8px 14px; border-radius:8px; font-size:0.85rem; font-weight:500;
