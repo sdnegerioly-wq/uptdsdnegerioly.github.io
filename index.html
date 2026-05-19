@@ -77,7 +77,8 @@
   /* ── HERO ── */
   .hero {
     margin-top:68px;
-    background: linear-gradient(135deg, rgba(13,71,161,0.92) 0%, rgba(21,101,192,0.88) 50%, rgba(13,71,161,0.92) 100%),
+    background: linear-gradient(135deg, rgba(13,71,161,0.82) 0%, rgba(21,101,192,0.75) 50%, rgba(13,71,161,0.82) 100%),
+                url('https://iili.io/BZyU21V.png') center center / contain no-repeat,
                 #0D47A1;
     position:relative; overflow:hidden; padding: 100px 24px 110px;
     text-align:center; min-height: 600px; display:flex; align-items:center; justify-content:center;
@@ -150,12 +151,8 @@
     backdrop-filter:blur(8px);
   }
   .btn-outline:hover { background:rgba(255,255,255,0.2); border-color:#fff; transform:translateY(-3px); }
-  .hero-logo {
-    position:absolute; right:6%; top:50%; transform:translateY(-50%);
-    opacity:0.08; width:280px; z-index:1;
-    display:none;
-  }
-  @media(min-width:900px){ .hero-logo { display:block; } }
+  .hero-logo { display:none !important; }
+
 
   /* ── COUNTDOWN ── */
   .countdown-bar {
