@@ -446,6 +446,100 @@
   }
   .kelulusan-box p { color:rgba(255,255,255,0.85); line-height:1.8; font-size:0.95rem; }
 
+  /* ── SK KELULUSAN UPLOAD ── */
+  .sk-upload-section {
+    margin-top: 40px; max-width:720px; margin-left:auto; margin-right:auto;
+    background:rgba(255,255,255,0.08); border-radius:var(--radius); padding:36px;
+    backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.18);
+  }
+  .sk-upload-section h4 {
+    color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:6px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .sk-upload-section .sk-subtitle {
+    color:rgba(255,255,255,0.6); font-size:0.82rem; margin-bottom:24px;
+  }
+  .sk-tabs {
+    display:flex; gap:8px; margin-bottom:24px;
+  }
+  .sk-tab {
+    flex:1; padding:10px 14px; border-radius:10px; font-size:0.82rem; font-weight:600;
+    border:1.5px solid rgba(255,255,255,0.25); background:transparent;
+    color:rgba(255,255,255,0.65); cursor:pointer; transition:all 0.25s;
+  }
+  .sk-tab.active {
+    background:rgba(255,255,255,0.18); color:#fff; border-color:rgba(255,255,255,0.5);
+  }
+  .sk-tab:hover { background:rgba(255,255,255,0.12); color:#fff; }
+  .sk-panel { display:none; }
+  .sk-panel.active { display:block; }
+
+  /* Upload area */
+  .sk-dropzone {
+    border:2px dashed rgba(255,255,255,0.35); border-radius:14px;
+    padding:36px 20px; text-align:center; cursor:pointer;
+    transition:all 0.3s; position:relative;
+  }
+  .sk-dropzone:hover, .sk-dropzone.dragover {
+    border-color:#FFD700; background:rgba(255,215,0,0.06);
+  }
+  .sk-dropzone input[type=file] {
+    position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%;
+  }
+  .sk-dropzone .dz-icon { font-size:2.4rem; margin-bottom:12px; }
+  .sk-dropzone p { color:rgba(255,255,255,0.75); font-size:0.88rem; line-height:1.7; }
+  .sk-dropzone .dz-hint { font-size:0.75rem; color:rgba(255,255,255,0.45); margin-top:6px; }
+  .sk-btn-upload {
+    margin-top:18px; background:linear-gradient(135deg, #FFD700, #FFC107);
+    color:#7B0000; padding:12px 28px; border-radius:50px;
+    font-weight:700; font-size:0.88rem; border:none; cursor:pointer;
+    transition:all 0.3s; display:inline-flex; align-items:center; gap:8px;
+    box-shadow: 0 4px 18px rgba(255,215,0,0.35);
+  }
+  .sk-btn-upload:hover { transform:translateY(-2px); box-shadow: 0 8px 24px rgba(255,215,0,0.5); }
+  .sk-btn-upload:disabled { opacity:0.5; cursor:not-allowed; transform:none; }
+
+  /* File list */
+  .sk-file-list { list-style:none; margin-top:18px; display:flex; flex-direction:column; gap:10px; }
+  .sk-file-item {
+    display:flex; align-items:center; gap:12px;
+    background:rgba(255,255,255,0.08); border-radius:10px; padding:12px 16px;
+    border:1px solid rgba(255,255,255,0.12);
+  }
+  .sk-file-item .fi-icon { font-size:1.3rem; flex-shrink:0; }
+  .sk-file-item .fi-info { flex:1; min-width:0; }
+  .sk-file-item .fi-name { font-size:0.85rem; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .sk-file-item .fi-meta { font-size:0.75rem; color:rgba(255,255,255,0.5); margin-top:2px; }
+  .sk-file-item .fi-remove {
+    background:rgba(255,80,80,0.2); border:none; color:#FF8A80; border-radius:6px;
+    width:28px; height:28px; cursor:pointer; font-size:0.9rem; flex-shrink:0;
+    transition:all 0.2s; display:flex; align-items:center; justify-content:center;
+  }
+  .sk-file-item .fi-remove:hover { background:rgba(255,80,80,0.4); color:#fff; }
+  .sk-file-item .fi-download {
+    background:rgba(255,215,0,0.15); border:none; color:#FFD700; border-radius:6px;
+    width:28px; height:28px; cursor:pointer; font-size:0.9rem; flex-shrink:0;
+    transition:all 0.2s; display:flex; align-items:center; justify-content:center; text-decoration:none;
+  }
+  .sk-file-item .fi-download:hover { background:rgba(255,215,0,0.3); }
+
+  /* Status message */
+  .sk-status {
+    margin-top:14px; padding:12px 16px; border-radius:10px;
+    font-size:0.83rem; font-weight:600; display:none; align-items:center; gap:8px;
+  }
+  .sk-status.success { display:flex; background:rgba(76,175,80,0.15); color:#A5D6A7; border:1px solid rgba(76,175,80,0.25); }
+  .sk-status.error { display:flex; background:rgba(255,80,80,0.15); color:#FF8A80; border:1px solid rgba(255,80,80,0.25); }
+
+  /* Download panel */
+  .sk-empty { text-align:center; padding:28px 0; color:rgba(255,255,255,0.45); font-size:0.88rem; }
+  .sk-empty .sk-empty-icon { font-size:2rem; margin-bottom:10px; }
+  .sk-admin-note {
+    margin-top:16px; padding:12px 16px; background:rgba(255,215,0,0.08);
+    border-radius:10px; font-size:0.78rem; color:rgba(255,215,0,0.75);
+    border:1px solid rgba(255,215,0,0.2); line-height:1.6;
+  }
+
   /* ── IDENTITAS ── */
   .identitas { background:linear-gradient(135deg, #F5F7FA 0%, #EEF2F7 100%); }
   .id-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
@@ -1075,6 +1169,55 @@
         📢 Pengumuman akan disampaikan melalui website resmi sekolah dan papan pengumuman sekolah.
       </div>
     </div>
+
+    <!-- SK KELULUSAN -->
+    <div class="sk-upload-section fade-in" style="margin-top:40px;">
+      <h4>📄 Surat Keputusan Kelulusan</h4>
+      <p class="sk-subtitle">Unggah atau unduh SK Kelulusan peserta didik kelas 6 tahun ajaran 2025/2026</p>
+
+      <div class="sk-tabs">
+        <button class="sk-tab active" onclick="switchSkTab('upload', this)">⬆️ Upload SK</button>
+        <button class="sk-tab" onclick="switchSkTab('download', this)">⬇️ Lihat &amp; Unduh SK</button>
+      </div>
+
+      <!-- Panel Upload -->
+      <div class="sk-panel active" id="skPanelUpload">
+        <div class="sk-dropzone" id="skDropzone">
+          <input type="file" id="skFileInput" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple
+            onchange="handleSkFiles(this.files)">
+          <div class="dz-icon">📂</div>
+          <p>Klik atau <strong style="color:#FFD700;">seret file ke sini</strong> untuk mengunggah</p>
+          <p class="dz-hint">Format: PDF, DOC, DOCX, JPG, PNG &nbsp;|&nbsp; Maks. 10 MB per file</p>
+        </div>
+
+        <ul class="sk-file-list" id="skFileList"></ul>
+
+        <div style="text-align:center; margin-top:20px;">
+          <button class="sk-btn-upload" id="skBtnUpload" onclick="uploadSkFiles()" disabled>
+            ⬆️ Unggah Sekarang
+          </button>
+        </div>
+
+        <div class="sk-status" id="skStatus"></div>
+
+        <div class="sk-admin-note">
+          🔒 <strong>Catatan Admin:</strong> File yang diunggah akan disimpan dan dapat diakses oleh orang tua/wali peserta didik melalui tab "Lihat &amp; Unduh SK". Pastikan file telah ditandatangani secara resmi sebelum diunggah.
+        </div>
+      </div>
+
+      <!-- Panel Download -->
+      <div class="sk-panel" id="skPanelDownload">
+        <div id="skDocList">
+          <div class="sk-empty">
+            <div class="sk-empty-icon">📭</div>
+            <p>Belum ada SK Kelulusan yang diunggah.</p>
+            <p style="margin-top:6px; font-size:0.78rem;">SK akan tersedia setelah diumumkan pada <strong style="color:#FFD700;">02 Juni 2026</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SK KELULUSAN -->
+
   </div>
 </section>
 
@@ -1241,6 +1384,122 @@ document.addEventListener('keydown', e=>{
 
 <!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" title="Kembali ke atas">▲</button>
+
+
+<script>
+// ── SK KELULUSAN UPLOAD ──
+const SK_STORAGE_KEY = 'sdnoly_sk_kelulusan';
+let skPendingFiles = [];
+
+function switchSkTab(tab, btn) {
+  document.querySelectorAll('.sk-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.sk-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('skPanel' + tab.charAt(0).toUpperCase() + tab.slice(1)).classList.add('active');
+  if (tab === 'download') renderSkDocList();
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+function fileIcon(name) {
+  const ext = name.split('.').pop().toLowerCase();
+  if (ext === 'pdf') return '📕';
+  if (['doc','docx'].includes(ext)) return '📘';
+  if (['jpg','jpeg','png'].includes(ext)) return '🖼️';
+  return '📄';
+}
+
+function handleSkFiles(files) {
+  const maxSize = 10 * 1024 * 1024;
+  for (const f of files) {
+    if (f.size > maxSize) { showSkStatus('error', 'File "' + f.name + '" melebihi batas 10 MB.'); continue; }
+    if (!skPendingFiles.find(p => p.name === f.name)) skPendingFiles.push(f);
+  }
+  renderPendingList();
+  document.getElementById('skBtnUpload').disabled = skPendingFiles.length === 0;
+  hideSkStatus();
+}
+
+function renderPendingList() {
+  const ul = document.getElementById('skFileList');
+  if (!ul) return;
+  ul.innerHTML = skPendingFiles.map((f, i) => '<li class="sk-file-item"><span class="fi-icon">' + fileIcon(f.name) + '</span><div class="fi-info"><div class="fi-name">' + f.name + '</div><div class="fi-meta">' + formatBytes(f.size) + '</div></div><button class="fi-remove" onclick="removePending(' + i + ')" title="Hapus">&#x2715;</button></li>').join('');
+}
+
+function removePending(i) {
+  skPendingFiles.splice(i, 1);
+  renderPendingList();
+  document.getElementById('skBtnUpload').disabled = skPendingFiles.length === 0;
+}
+
+function uploadSkFiles() {
+  if (!skPendingFiles.length) return;
+  const btn = document.getElementById('skBtnUpload');
+  btn.disabled = true; btn.textContent = 'Mengunggah...';
+
+  const stored = JSON.parse(localStorage.getItem(SK_STORAGE_KEY) || '[]');
+  const readers = skPendingFiles.map(f => new Promise(res => {
+    const r = new FileReader();
+    r.onload = e => res({ name: f.name, size: f.size, type: f.type, data: e.target.result, uploaded: new Date().toLocaleString('id-ID') });
+    r.readAsDataURL(f);
+  }));
+
+  Promise.all(readers).then(results => {
+    const merged = [...stored, ...results.filter(r => !stored.find(s => s.name === r.name))];
+    try { localStorage.setItem(SK_STORAGE_KEY, JSON.stringify(merged)); } catch(e) { showSkStatus('error', 'Penyimpanan penuh. Hapus beberapa file terlebih dahulu.'); btn.disabled = false; btn.textContent = 'Unggah Sekarang'; return; }
+    skPendingFiles = [];
+    renderPendingList();
+    btn.disabled = false; btn.textContent = 'Unggah Sekarang';
+    showSkStatus('success', results.length + ' file berhasil diunggah!');
+    renderSkDocList();
+  });
+}
+
+function renderSkDocList() {
+  const stored = JSON.parse(localStorage.getItem(SK_STORAGE_KEY) || '[]');
+  const container = document.getElementById('skDocList');
+  if (!container) return;
+  if (!stored.length) {
+    container.innerHTML = '<div class="sk-empty"><div class="sk-empty-icon">📭</div><p>Belum ada SK Kelulusan yang diunggah.</p><p style="margin-top:6px;font-size:0.78rem;">SK akan tersedia setelah diumumkan pada <strong style="color:#FFD700;">02 Juni 2026</strong>.</p></div>';
+    return;
+  }
+  container.innerHTML = '<ul class="sk-file-list">' + stored.map((f, i) => '<li class="sk-file-item"><span class="fi-icon">' + fileIcon(f.name) + '</span><div class="fi-info"><div class="fi-name">' + f.name + '</div><div class="fi-meta">' + formatBytes(f.size) + ' &nbsp;·&nbsp; ' + f.uploaded + '</div></div><a class="fi-download" href="' + f.data + '" download="' + f.name + '" title="Unduh">⬇️</a><button class="fi-remove" onclick="deleteSkDoc(' + i + ')" title="Hapus">&#x2715;</button></li>').join('') + '</ul>';
+}
+
+function deleteSkDoc(i) {
+  if (!confirm('Hapus file ini dari daftar?')) return;
+  const stored = JSON.parse(localStorage.getItem(SK_STORAGE_KEY) || '[]');
+  stored.splice(i, 1);
+  localStorage.setItem(SK_STORAGE_KEY, JSON.stringify(stored));
+  renderSkDocList();
+}
+
+function showSkStatus(type, msg) {
+  const el = document.getElementById('skStatus');
+  if (!el) return;
+  el.className = 'sk-status ' + type;
+  el.textContent = msg;
+  setTimeout(hideSkStatus, 5000);
+}
+function hideSkStatus() {
+  const el = document.getElementById('skStatus');
+  if (el) el.className = 'sk-status';
+}
+
+// Drag & drop
+window.addEventListener('DOMContentLoaded', function() {
+  const dz = document.getElementById('skDropzone');
+  if (dz) {
+    dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('dragover'); });
+    dz.addEventListener('dragleave', () => dz.classList.remove('dragover'));
+    dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('dragover'); handleSkFiles(e.dataTransfer.files); });
+  }
+});
+</script>
 
 </body>
 </html>
